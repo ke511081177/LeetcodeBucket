@@ -1,7 +1,6 @@
 class Solution {
 public:
-    int shortestPathLength(vector<vector<int>>& graph) {
-        
+    int BFS(vector<vector<int>>& graph){
         queue<vector<int>> q;
         set<pair<int,int>> visited;
         int len = graph.size();
@@ -41,5 +40,10 @@ public:
              }
          }
         return 0;
+    }
+    int shortestPathLength(vector<vector<int>>& graph) {
+        
+        return BFS(graph);
+        
      }
 };
