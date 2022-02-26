@@ -1,11 +1,17 @@
 class Solution {
 public:
-    int BFS(vector<vector<int>>& graph){
+    
+  
+    
+    int shortestPathLength(vector<vector<int>>& graph) {
+        
         queue<vector<int>> q;
         set<pair<int,int>> visited;
         int len = graph.size();
         int res = 0;
         
+        if(len == 1) return 0;
+        if(len == 2) return 1;
         for(int i = 0; i < len; i++){
             vector<int> temp(3,0);
             temp[0] = i;                // node
@@ -38,12 +44,8 @@ public:
                      q.push(temp);
                  }
              }
-         }
-        return 0;
-    }
-    int shortestPathLength(vector<vector<int>>& graph) {
-        
-        return BFS(graph);
         
      }
+        return 0;
+    }
 };
