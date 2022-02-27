@@ -2,15 +2,16 @@ class Solution {
 public:
     char findTheDifference(string s, string t) {
         
-        char res;
-        //int lens = s.size();
+        // Use ASCII code concept to solve
+        // Have a good day.
         
-        for(int i = 0; i < s.size(); i++)
+        char res;
+        int lens = s.size();
+        
+        for(int i = 0; i < lens; i++)
             res += t[i]-s[i];
             
-        
-        res += t[s.size()];
-        
+        res += t[lens];
         return res;
     }
 };
