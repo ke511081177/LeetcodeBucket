@@ -3,13 +3,13 @@ public:
     char findTheDifference(string s, string t) {
         
         char res;
-        int lens = s.size();
+        //int lens = s.size();
         
-        for(int i = 0; i < lens; i++)
+        for(int i = 0; i < s.size(); i++)
             res += t[i]-s[i];
             
         
-        res += t[lens];
+        res += t[s.size()];
         
         return res;
     }
