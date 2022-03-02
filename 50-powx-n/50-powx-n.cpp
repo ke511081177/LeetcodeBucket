@@ -4,6 +4,7 @@ public:
         
         double res = 1;
         
+  
         if(n < 0)
             x = 1/x;
         
