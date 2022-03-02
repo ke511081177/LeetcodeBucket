@@ -5,13 +5,13 @@ public:
         if(s.size() == 0) return true;
         if(t.size() == 0) return false;
         
-        int i = 0;
+        int i = 0, len = s.size();
         
         for(auto c:t){
             if(s[i] == c)
                 i++;
            
-            if(i ==  s.size())
+            if(i == len)
                 return true;
         }
         return false;
