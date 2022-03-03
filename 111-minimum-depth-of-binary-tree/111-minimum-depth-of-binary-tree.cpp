@@ -11,21 +11,44 @@
  */
 class Solution {
 public:
-    int check(TreeNode* root, int depth){
+//     int check(TreeNode* root, int depth){
         
-        if(!root)
-            return depth-1;
-        if(root->left && root->right)
-            return min(check(root->left, depth+1),check(root->right, depth+1));
-        return max(check(root->left, depth+1),check(root->right, depth+1));
-    }
-    
-    int minDepth(TreeNode* root) {
+//         if(!root)
+//             return depth-1;
+//         if(root->left && root->right)
+//             return min(check(root->left, depth+1),check(root->right, depth+1));
+//         return max(check(root->left, depth+1),check(root->right, depth+1));
+//     }
+   int minDepth(TreeNode* root) {
         
         int res = 0;
         if(!root)
             return res;
         
-        return check(root, res+1); 
-    }
+        queue<TreeNode*> q;
+        q.push(root);
+        
+        while(!q.empty()){
+            
+            res++;
+            
+            int len = q.size();
+            
+            // trace every level
+            for(int i = 0; i < len; i++){
+                TreeNode* temp = q.front();
+                q.pop();
+                
+                if(temp->left)
+                    q.push(temp->left);
+                if(temp->right)
+                    q.push(temp->right);
+                if(!temp->left && !temp->right)
+                    return res;
+            }
+            
+        }
+        return res; 
+    } 
+    
 };
