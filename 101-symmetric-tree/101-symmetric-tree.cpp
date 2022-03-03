@@ -28,6 +28,29 @@ public:
         
         if(!root) return true;
         
-        return check(root->left, root->right);
+        queue<TreeNode*> q;
+        q.push(root->left);
+        q.push(root->right);
+        
+        
+        while(!q.empty()){
+            TreeNode* l = q.front();
+            q.pop();
+            TreeNode* r = q.front();
+            q.pop();
+            
+            if( !l&&r || l&&!r)
+                return false;
+            if(l){
+                if(l->val != r->val)
+                    return false;
+                q.push(l->left);
+                q.push(r->right);
+                q.push(l->right);
+                q.push(r->left);
+            }
+            
+        }
+        return true;
     }
 };
