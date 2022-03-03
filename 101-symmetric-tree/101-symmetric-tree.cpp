@@ -11,18 +11,18 @@
  */
 class Solution {
 public:
-    bool check(TreeNode* left, TreeNode* right){
-        if(left == NULL && right == NULL) 
-            return true;
+//     bool check(TreeNode* left, TreeNode* right){
+//         if(left == NULL && right == NULL) 
+//             return true;
         
-        if(left == NULL || right == NULL) 
-            return false;
+//         if(left == NULL || right == NULL) 
+//             return false;
         
-        if(left->val != right->val)
-            return false;
+//         if(left->val != right->val)
+//             return false;
         
-        return check(left->left,right->right) && check(left->right,right->left);
-    }
+//         return check(left->left,right->right) && check(left->right,right->left);
+//     }
     
     bool isSymmetric(TreeNode* root) {
         
