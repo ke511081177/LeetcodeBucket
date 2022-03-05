@@ -13,7 +13,7 @@ public:
         
         dp[0] = 0;
         dp[1] = sum[1];
-        //now apply the house robbing concept
+        
         for(int i=2; i<len; i++){
             dp[i] = max(dp[i-2] + sum[i], dp[i-1]);
         }
