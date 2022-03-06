@@ -8,7 +8,8 @@ public:
         for (int i = 0; i < n; i++) {
             mask ^= (1 << string("aeiou").find(s[i]) + 1) >> 1;
          
-            if (!m.count(mask)) m[mask] = i;
+            if (!m.count(mask)) 
+                m[mask] = i;
          
             res = max(res, i - m[mask]);
         }
