@@ -12,9 +12,10 @@ public:
         while(n-- > 0){
             
             string temp = "";
-            int len = res.size();
-            int count = 1;
             char digit = res[0];
+            
+            int len = res.size(), count = 1;
+            
             
             for(int i = 1; i < len; i++){
                 if(res[i] != digit){
