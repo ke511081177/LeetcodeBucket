@@ -9,14 +9,13 @@ public:
         
         for(int i = 0; i < len-3; i++){
             
-            if(nums[i] > target && target >= 0) 
-                break;
             long long sum = nums[i];
             sum +=+ nums[i+1]; 
             sum += nums[i+2];
             sum += nums[i+3];
             
-            if( sum > target)
+ 
+            if( (nums[i] > target && target >= 0) || (sum > target)) 
                 break;
             
             sum =  nums[i];
