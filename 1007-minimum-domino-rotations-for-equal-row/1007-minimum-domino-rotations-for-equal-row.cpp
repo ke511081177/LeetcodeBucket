@@ -14,7 +14,7 @@ public:
                 count1++;
             if(bottoms[i] == nums)
                 count2++;
-            cout << count1 << " ";
+    
         }
        
     
