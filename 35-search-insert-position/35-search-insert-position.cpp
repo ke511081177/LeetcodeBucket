@@ -7,9 +7,8 @@ public:
         while(i <= j){
             int mid = (i+j)/2;
             
-            if(nums[mid] == target)
-                return mid;
-            else if(nums[mid]<target)
+           
+            if(nums[mid]<target)
                 i = mid+1;
             else
                 j = mid-1;
