@@ -9,7 +9,7 @@ public:
         
         for(int i = k-1; i >= 0; i--){
             temp.push_back(nums[len-i-1]);
-            // temp[i] = nums[len-i-1];
+      
         }
         for(int i = len-k-1; i >= 0; i-- )
             nums[i+k] = nums[i];
