@@ -11,17 +11,16 @@
  */
 class Solution {
 public:
-    int count = 0;
+ 
     int res;
-    void dfs(TreeNode* root, int k){
-        if(count == k || !root)
+    void dfs(TreeNode* root, int &k){
+        if(k == 0 || !root)
             return;
         dfs(root->left,k );
-        count++;
-        if(count == k){
+        
+        if(-- k == 0)
             res = root->val;
-            return;
-        }
+        
         dfs(root->right,k);
     }
     int kthSmallest(TreeNode* root, int k) {
